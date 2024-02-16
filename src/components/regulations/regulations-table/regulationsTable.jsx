@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function RegulationsTable({ data, onOpenModal }) {
   return (
-    <div className="flex-grow bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-visible">
+    <div className="flex-grow bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow overflow-visible">
       <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
         <div className="w-full md:w-1/2">
           <form className="flex items-center">
