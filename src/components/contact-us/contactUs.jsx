@@ -34,7 +34,7 @@ export default function ContactUs() {
                       <Envelope size={32} />
 
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        test@gmail.com
+                        mohamed@gmail.com
                       </h5>
                     </a>
                     <a
@@ -44,7 +44,7 @@ export default function ContactUs() {
                       <MapPin size={32} />
 
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        Bni thour w el 9abra tdor
+                        Bni Thour, Algeria
                       </h5>
                     </a>
                   </div>
