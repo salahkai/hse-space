@@ -7,13 +7,13 @@ import ContactUs from '../components/contact-us/contactUs';
 
 export default function Main() {
   return (
-    <>
+    <div>
       <Hero />
       <Features />
       <Prices />
       <States />
       <Faq />
       <ContactUs />
-    </>
+    </div>
   );
 }

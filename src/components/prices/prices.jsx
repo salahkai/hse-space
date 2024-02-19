@@ -23,7 +23,7 @@ export default function Prices() {
               </h3>
               <div className="flex items-center mb-6">
                 <span className="font-manrope mr-2 text-6xl font-semibold">
-                  $0
+                  0
                 </span>
                 <span className="text-xl text-gray-500 ">
                   / month
@@ -75,7 +75,7 @@ export default function Prices() {
                 </h3>
                 <div className="flex items-center mb-6">
                   <span className="font-manrope mr-2 text-6xl font-semibold text-primary-600">
-                    $150
+                    0
                   </span>
                   <span className="text-xl text-gray-500 ">
                     / month
@@ -127,7 +127,7 @@ export default function Prices() {
               </h3>
               <div className="flex items-center mb-6">
                 <span className="font-manrope mr-2 text-6xl font-semibold">
-                  $180
+                  0
                 </span>
                 <span className="text-xl text-gray-500 ">
                   / month
