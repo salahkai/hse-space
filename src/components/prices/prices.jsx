@@ -2,7 +2,7 @@ import { CheckCircle } from '@phosphor-icons/react';
 
 export default function Prices() {
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative" id="prices">
       <div className="absolute h-[36.5rem] w-full top-0 bg-gradient-to-r from-primary-600 to-primary-500 -z-10" />
       <section className="">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

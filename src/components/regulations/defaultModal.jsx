@@ -1,18 +1,20 @@
 import { Dialog, Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import { X, Plus } from '@phosphor-icons/react';
 
 export default function DefaultModal({
   isOpen,
   name,
   onCloseModal,
-  ModalContent,
+  children,
+  title,
 }) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10"
-        onClose={() => onCloseModal(name)}
+        onClose={() => onCloseModal()}
       >
         <Transition.Child
           as={Fragment}
@@ -42,9 +44,17 @@ export default function DefaultModal({
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                  Add Regulation
+                  {title}
                 </Dialog.Title>
-                {/* <ModalContent /> */}
+                {children}
+                <button
+                  onClick={onCloseModal}
+                  type="button"
+                  className="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <X size={22} weight="bold" />
+                  <span className="sr-only">Close modal</span>
+                </button>
               </Dialog.Panel>
             </Transition.Child>
           </div>

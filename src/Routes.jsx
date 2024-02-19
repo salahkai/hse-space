@@ -13,6 +13,7 @@ import SignUp from './pages/signup';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import Regulations from './pages/regulations';
+import Categories from './pages/categories';
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,8 @@ const AppRoutes = () => {
       >
         <Route path="/" element={<Main />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/categories" element={<Categories />} />
+
         <Route path="/regulations" element={<Regulations />} />
       </Route>
     </Routes>

@@ -70,7 +70,7 @@ export default function Profile() {
               </p>
             </div>
             <div className="md:w-2/3 w-full">
-              <div className="py-6 px-16 ">
+              {/* <div className="py-6 px-16 ">
                 <label
                   htmlFor="photo"
                   className="text-sm text-gray-600 w-full block"
@@ -93,7 +93,7 @@ export default function Profile() {
                     Change Photo
                   </div>
                 </div>
-              </div>
+              </div> */}
               <hr className="border-gray-200" />
               <div className="py-6 px-16 flex flex-col space-y-4">
                 <div>

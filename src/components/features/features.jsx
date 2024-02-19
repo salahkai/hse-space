@@ -8,7 +8,7 @@ import {
 
 export default function Features() {
   return (
-    <section className="py-24">
+    <section className="py-24" id="features">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <span className="py-1 px-4  bg-primary-100 rounded-full text-sm font-medium text-primary-600 text-center">
           Features

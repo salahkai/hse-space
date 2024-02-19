@@ -1,13 +1,14 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuthContext } from '../../context/AuthContext';
 import { Menu, Transition } from '@headlessui/react';
 import { removeToken } from '../../helpers';
 import { Fragment } from 'react';
+import { UserCircle } from '@phosphor-icons/react';
 
 export default function Navbar() {
+  const path = useLocation().pathname;
   const navigate = useNavigate();
   const { user } = useAuthContext();
-  console.log(user);
   const handleLogout = () => {
     removeToken();
     navigate('/login', { replace: true });
@@ -27,8 +28,8 @@ export default function Navbar() {
               <div className="w-full px-6 flex justify-between md:w-max md:px-0 z-30">
                 <Link to="/" aria-label="logo">
                   <img
-                    src="https://img.logoipsum.com/311.svg"
-                    className="w-32 dark:hidden"
+                    src="https://i.ibb.co/y6JBy6H/20240219-122827-0000.png"
+                    className="w-40 dark:hidden"
                     alt="tailus logo"
                     width={144}
                     height={68}
@@ -77,38 +78,71 @@ export default function Navbar() {
                           text-gray-500 dark:text-gray-300 font-medium flex flex-col md:flex-row md:gap-y-0"
                   >
                     <li>
-                      <Link to="/" className="block md:px-4">
+                      <Link
+                        to="/"
+                        className={`block md:px-4 ${
+                          path == '/' && 'group '
+                        }`}
+                      >
                         <div
-                          className="relative text-primary-600 dark:text-primary-400
-                                                  before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:h-1 before:mx-auto before:mt-auto before:rounded-t-full before:bg-primary-500"
+                          className={`${
+                            path == '/'
+                              ? 'text-primary-600 dark:text-primary-400 before:h-1 before:mx-auto before:rounded-t-full before:bg-primary-500'
+                              : 'group before:w-full before:h-0.5 before:origin-left before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100'
+                          }
+                          relative before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:mt-auto`}
                         >
-                          <span>Home</span>
+                          <span
+                            className={
+                              path == '/' ||
+                              'group-hover:text-primary-500'
+                            }
+                          >
+                            Home
+                          </span>
                         </div>
                       </Link>
                     </li>
                     <li>
-                      <a href="#" className="block md:px-4 group">
-                        <div
-                          className="relative group
-                                                  before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:h-0.5 before:origin-left before:mt-auto before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                      <Link
+                        to="/categories"
+                        className={`block md:px-4 ${
+                          path == 'categories' && 'group '
+                        }`}
+                      >
+                        <d
+                          className={`${
+                            path == '/categories'
+                              ? 'text-primary-600 dark:text-primary-400 before:h-1 before:mx-auto before:rounded-t-full before:bg-primary-500'
+                              : 'group before:w-full before:h-0.5 before:origin-left before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100'
+                          }
+                          relative before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:mt-auto`}
                         >
-                          <span className="group-hover:text-primary-500">
-                            Services
+                          <span
+                            className={
+                              path == 'regulations' ||
+                              'group-hover:text-primary-500'
+                            }
+                          >
+                            Regulations
                           </span>
-                        </div>
-                      </a>
+                        </d>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="block md:px-4 group">
+                      <Link
+                        to="https://hse-space-run-place.preview-domain.com/"
+                        className="block md:px-4 group"
+                      >
                         <div
-                          className="relative group
-                                                  before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:h-0.5 before:origin-left before:mt-auto before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                          className={`relative group
+                                                  before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:h-0.5 before:origin-left before:mt-auto before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100`}
                         >
                           <span className="group-hover:text-primary-500">
-                            About
+                            Courses
                           </span>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -142,8 +176,8 @@ export default function Navbar() {
                       className="relative inline-block text-left"
                     >
                       <div>
-                        <Menu.Button className="rounded-full border overflow-hidden w-10 h-10">
-                          <img src="https://img.logoipsum.com/331.svg"></img>
+                        <Menu.Button className="rounded-full  overflow-hidden w-8 h-8 flex justify-center items-center text-gray-500">
+                          <UserCircle size={32} />
                         </Menu.Button>
                       </div>
                       <Transition

@@ -8,7 +8,16 @@ import { Dialog, Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function RegulationsTable({ data, onOpenModal }) {
+export default function RegulationsTable({
+  data,
+  onOpenModal,
+  OnSearch,
+}) {
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const handleChangeKeyword = (e) => {
+    setSearchKeyword(e.target.value);
+    OnSearch(e);
+  };
   return (
     <div className="flex-grow bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow overflow-visible">
       <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
@@ -22,26 +31,26 @@ export default function RegulationsTable({ data, onOpenModal }) {
                 <MagnifyingGlass size={20} />
               </div>
               <input
+                onChange={handleChangeKeyword}
                 type="text"
-                id="simple-search"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search"
-                required=""
+                value={searchKeyword}
               />
             </div>
           </form>
         </div>
         <div className="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-          <button
+          {/* <button
             type="button"
             onClick={() => onOpenModal('addRegulation')}
             className="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >
             <Plus size={16} className="mr-1" weight="bold" />
             Add regulation
-          </button>
+          </button> */}
           <div className="flex items-center space-x-3 w-full md:w-auto">
-            <button
+            {/* <button
               id="filterDropdownButton"
               data-dropdown-toggle="filterDropdown"
               className="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -74,7 +83,7 @@ export default function RegulationsTable({ data, onOpenModal }) {
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                 />
               </svg>
-            </button>
+            </button> */}
             <div
               id="filterDropdown"
               className="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700"
@@ -180,13 +189,13 @@ export default function RegulationsTable({ data, onOpenModal }) {
               <th scope="col" className="px-4 py-3">
                 Link
               </th>
-              <th scope="col" className="px-4 py-3 text-right">
+              {/* <th scope="col" className="px-4 py-3 text-right">
                 Actions
-              </th>
+              </th> */}
             </tr>
           </thead>
           <tbody>
-            {data.map((e) => (
+            {data?.map((e) => (
               <tr
                 key={e.id}
                 className="border-b dark:border-gray-700 font-medium text-gray-800"
@@ -195,18 +204,24 @@ export default function RegulationsTable({ data, onOpenModal }) {
                   scope="row"
                   className="px-4 py-3 whitespace-nowrap dark:text-white"
                 >
-                  test
+                  {e.attributes.type}
                 </th>
 
-                <td className="px-4 py-3">{e.creationDate}</td>
-                <td className="px-4 py-3">{e.description}</td>
-                <td className="px-4 py-3">{e.addedDate}</td>
                 <td className="px-4 py-3">
-                  <Link download to={e.link}>
+                  {e.attributes.date.split('T')[0]}
+                </td>
+                <td className="px-4 py-3">
+                  {e.attributes.description}
+                </td>
+                <td className="px-4 py-3">
+                  {e.attributes.updatedAt.split('T')[0]}
+                </td>
+                <td className="px-4 py-3">
+                  <Link download to={e.attributes.link}>
                     <FileArrowDown size={32} color="red" />
                   </Link>
                 </td>
-                <td className="px-4 ">
+                {/* <td className="px-4 ">
                   <div className="flex items-center justify-end">
                     <Menu
                       as="div"
@@ -230,7 +245,9 @@ export default function RegulationsTable({ data, onOpenModal }) {
                             <Menu.Item>
                               {({ active }) => (
                                 <Link
-                                  to="/profile"
+                                  onClick={() =>
+                                    onOpenModal('addRegulation')
+                                  }
                                   className={`${
                                     active
                                       ? 'bg-primary-500 text-white'
@@ -259,13 +276,13 @@ export default function RegulationsTable({ data, onOpenModal }) {
                       </Transition>
                     </Menu>
                   </div>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <nav
+      {/* <nav
         className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
         aria-label="Table navigation"
       >
@@ -279,7 +296,7 @@ export default function RegulationsTable({ data, onOpenModal }) {
             &nbsp;1000
           </span>
         </span>
-      </nav>
+      </nav> */}
     </div>
   );
 }

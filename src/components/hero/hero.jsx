@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
-    <div className="relative min-h-screen flex dark:from-gray-900 bg-gradient-to-b from-white to-primary-50">
+    <section
+      id="hero"
+      className="relative min-h-screen flex dark:from-gray-900 bg-gradient-to-b from-white to-primary-50"
+    >
       <div className="container m-auto px-6 py-20 md:pb-0 md:pt-40 md:px-12 lg:py-0 lg:px-10">
         <div className="flex flex-wrap gap-12">
           <div className="lg:w-6/12 lg:pt-32 lg:pb-20">
@@ -16,18 +21,20 @@ export default function Hero() {
                 skills
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
+                <Link
+                  to="/regulations"
                   type="button"
-                  title="Start buying"
+                  title="reulations"
                   className="w-full py-3 px-6 rounded-xl text-center transition bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:bg-primary-500 sm:w-max"
                 >
                   <span className="block text-white font-semibold">
                     Explore Regulations
                   </span>
-                </button>
-                <button
+                </Link>
+                <Link
+                  to="/signup"
                   type="button"
-                  title="Start buying"
+                  title="regulations"
                   className="w-full py-3 px-6 rounded-xl text-center transition dark:active:bg-primary-900 dark:focus:bg-gray-800 active:bg-primary-200 focus:bg-primary-100 sm:w-max"
                 >
                   <div className="flex justify-center">
@@ -35,7 +42,7 @@ export default function Hero() {
                       Sign Up
                     </span>
                   </div>
-                </button>
+                </Link>
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
@@ -86,7 +93,6 @@ export default function Hero() {
             <img
               src="https://i.ibb.co/chcJ62v/Designer.png"
               className="ml-48 lg:ml-0"
-              alt="gril on an horse"
               loading="lazy"
               width={1053}
               height={772}
@@ -94,6 +100,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
