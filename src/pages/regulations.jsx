@@ -56,6 +56,7 @@ export default function Regulations() {
   };
   const handleChangeSubCategory = (name) => {
     navigate(`/regulations?category=${category}&subCategory=${name}`);
+    history.go(0);
 
     // setActiveSubCategory(name);
     // setSearchParams((searchParams) => {
