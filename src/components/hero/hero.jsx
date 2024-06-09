@@ -22,7 +22,7 @@ export default function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/trainings"
+                  to="/categories"
                   type="button"
                   title="trainings"
                   className="w-full py-3 px-6 rounded-xl text-center transition bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:bg-primary-500 sm:w-max"
