@@ -131,7 +131,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        to="http://localhost:5173/trainings"
+                        to="/trainings"
                         className="block md:px-4 group"
                       >
                         <div
