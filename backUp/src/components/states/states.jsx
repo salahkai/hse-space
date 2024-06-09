@@ -15,7 +15,7 @@ export default function States() {
             <div className="flex flex-col flex-1 gap-10 lg:gap-0 lg:flex-row lg:justify-between">
               <div className="block">
                 <div className="font-manrope font-bold text-4xl text-primary-600 mb-3 text-center lg:text-left">
-                  2+
+                  12+
                 </div>
                 <span className="text-gray-900 text-center block lg:text-left">
                   Active Clients
@@ -23,7 +23,7 @@ export default function States() {
               </div>
               <div className="block">
                 <div className="font-manrope font-bold text-4xl text-primary-600 mb-3 text-center lg:text-left">
-                  0
+                  125+
                 </div>
                 <span className="text-gray-900 text-center block lg:text-left">
                   Courses
@@ -31,7 +31,7 @@ export default function States() {
               </div>
               <div className="block">
                 <div className="font-manrope font-bold text-4xl text-primary-600 mb-3 text-center lg:text-left">
-                  1+
+                  724+
                 </div>
                 <span className="text-gray-900 text-center block lg:text-left">
                   Learners
@@ -39,7 +39,7 @@ export default function States() {
               </div>
               <div className="block">
                 <div className="font-manrope font-bold text-4xl text-primary-600 mb-3 text-center lg:text-left">
-                  0
+                  800+
                 </div>
                 <span className="text-gray-900 text-center block lg:text-left">
                   Completed courses

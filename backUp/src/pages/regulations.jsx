@@ -57,7 +57,49 @@ export default function Regulations() {
   const handleChangeSubCategory = (name) => {
     navigate(`/regulations?category=${category}&subCategory=${name}`);
     history.go(0);
+
+    // setActiveSubCategory(name);
+    // setSearchParams((searchParams) => {
+    //   searchParams.set('subCategory', name);
+    //   return searchParams;
+    // });
   };
+  useEffect(() => {
+    axios
+      .get(
+        `${API}/sub-categories?filters[$and][0][category][name][$eq]=${category}`
+      )
+      .then((response) => {
+        return response.data;
+      })
+      .then((data) => {
+        if (!subCategory) {
+          setSearchParams((searchParams) => {
+            searchParams.set(
+              'subCategory',
+              data.data[0].attributes.name
+            );
+            return searchParams;
+          });
+          setActiveSubCategory(data.data[0].attributes.name);
+        }
+        setActiveSubCategory(subCategory);
+
+        setSubRegulations(data.data);
+      });
+
+    axios
+      .get(
+        `${API}/regulations?filters[$and][0][sub_categories][name][$eq]=${subCategory}`
+      )
+      .then((response) => {
+        return response.data;
+      })
+      .then((data) => {
+        setRegulations(data.data);
+        setBeforeSearchRegulations(data.data);
+      });
+  }, []);
 
   const handleOpenModal = (modal) => {
     setModals((prev) => ({ ...prev, [modal]: true }));

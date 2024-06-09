@@ -14,12 +14,10 @@ import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import Regulations from './pages/regulations';
 import Categories from './pages/categories';
-import TrainerLogin from './pages/trainerLogin';
+
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/trainings" element={<TrainerLogin />} />
-
       <Route path="/login" element={<Login />} />
       <Route path="/signUp" element={<SignUp />} />
       <Route
@@ -32,7 +30,6 @@ const AppRoutes = () => {
         }
       >
         <Route path="/" element={<Main />} />
-
         <Route path="/profile" element={<Profile />} />
         <Route path="/categories" element={<Categories />} />
 

@@ -14,17 +14,17 @@ export default function Categories() {
             </a>
             <div className="px-5 ">
               <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Environment</a>
+                <a href="#">L’environnement</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                Legislative and regulatory texts
+                Textes Législatifs & Réglementaire
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Exploration of Essential Laws and Regulations that
-                supervise the Health Sector
+                Exploration des Lois et Règlements Essentiels qui
+                Encadrent le Secteur de la Santé
               </p>
               <Link
-                to="/regulations?category=environment&subCategory=Bio%20Diversity"
+                to="/regulations?category=environment&subCategory=Sustainable+Development"
                 className="text-primary-600"
               >
                 Explore more!
@@ -42,24 +42,24 @@ export default function Categories() {
             </a>
             <div className="px-5 ">
               <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Work</a>
+                <a href="#">Travail</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                Legislative and regulatory texts
+                Textes Législatifs & Réglementaire
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Exploration of Essential Laws and Regulations that
-                supervise the Work Sector
+                Exploration des Lois et Règlements Essentiels qui
+                Encadrent le Secteur de Travail
               </p>
               <Link
-                to="/regulations?category=work&subCategory=Labor%20Organization"
+                to="/regulations?category=environment&subCategory=Sustainable+Development"
                 className="text-primary-600"
               >
                 Explore more!
               </Link>
             </div>
           </div>
-        </div>
+        </div>{' '}
         <div className="w-[45%] grid gap-8  lg:mb-16 ">
           <div className="p-1 items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
@@ -70,17 +70,17 @@ export default function Categories() {
             </a>
             <div className="px-5 ">
               <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Health</a>
+                <a href="#">La Santé</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                Legislative and regulatory texts
+                Textes Législatifs & Réglementaire
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Exploration of Essential Laws and Regulations that
-                supervise the Health Sector
+                Exploration des Lois et Règlements Essentiels qui
+                Encadrent le Secteur de la Santé
               </p>
               <Link
-                to="/regulations?category=health&subCategory=Occupational%20Diseases%20and%20Work%20Accidents"
+                to="/regulations?category=health&subCategory=Sustainable+Development"
                 className="text-primary-600"
               >
                 Explore more!
@@ -98,17 +98,17 @@ export default function Categories() {
             </a>
             <div className="px-5 ">
               <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Security</a>
+                <a href="#">La Sécurité</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                Legislative and regulatory texts
+                Textes Législatifs & Réglementaire
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Exploration of the Essential Laws and Regulations that
-                govern the Security Sector{' '}
+                Exploration des Lois et Règlements Essentiels qui
+                Encadrent le Secteur de la Sécurité
               </p>
               <Link
-                to="/regulations?category=security&subCategory=Risk%20Management"
+                to="/regulations?category=security&subCategory=Sustainable+Development"
                 className="text-primary-600"
               >
                 Explore more!

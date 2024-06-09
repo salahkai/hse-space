@@ -24,7 +24,7 @@ export default function ContactUs() {
                     >
                       <Phone size={32} />
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        (+213) 675752966
+                        (+213) 541256986
                       </h5>
                     </a>
                     <a
@@ -34,7 +34,7 @@ export default function ContactUs() {
                       <Envelope size={32} />
 
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        mohoubihse30@gmail.com
+                        mohamed@gmail.com
                       </h5>
                     </a>
                     <a
@@ -44,7 +44,7 @@ export default function ContactUs() {
                       <MapPin size={32} />
 
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        Ouargla, Algeria
+                        Bni Thour, Algeria
                       </h5>
                     </a>
                   </div>

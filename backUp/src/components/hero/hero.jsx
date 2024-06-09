@@ -22,9 +22,9 @@ export default function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/trainings"
+                  to="/regulations"
                   type="button"
-                  title="trainings"
+                  title="reulations"
                   className="w-full py-3 px-6 rounded-xl text-center transition bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:bg-primary-500 sm:w-max"
                 >
                   <span className="block text-white font-semibold">
@@ -45,7 +45,7 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-            {/* <div className="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
+            <div className="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
               <h6 className="text-lg text-primary-800 dark:text-primary-400 font-semibold">
                 Trusted by
               </h6>
@@ -87,7 +87,7 @@ export default function Hero() {
                   />
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="hidden bottom-0 md:-right-32 md:block md:w-full md:ml-auto lg:absolute lg:-right-32 lg:w-[60%] xl:-right-48">
             <img

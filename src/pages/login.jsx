@@ -54,11 +54,11 @@ export default function Login() {
   return (
     <section className="flex justify-center relative">
       <div className="mx-auto max-w-lg px-6 lg:px-8  py-20">
-        <img
-          src="https://img.logoipsum.com/311.svg"
+        {/* <img
+          src="https://i.ibb.co/y6JBy6H/20240219-122827-0000.png"
           alt=" logo"
           className="mx-auto lg:mb-11 mb-8"
-        />
+        /> */}
         <div className="rounded-2xl bg-white shadow-xl">
           <form
             onSubmit={handleSubmit}

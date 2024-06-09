@@ -131,7 +131,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        to="http://localhost:5173/trainings"
+                        to="https://hse-space-run-place.preview-domain.com/"
                         className="block md:px-4 group"
                       >
                         <div
@@ -139,7 +139,7 @@ export default function Navbar() {
                                                   before:absolute before:-bottom-2 md:before:-bottom-7 before:w-full before:h-0.5 before:origin-left before:mt-auto before:rounded-full before:bg-primary-800 before:transition before:scale-x-0 group-hover:before:scale-x-100`}
                         >
                           <span className="group-hover:text-primary-500">
-                            Training
+                            Courses
                           </span>
                         </div>
                       </Link>
