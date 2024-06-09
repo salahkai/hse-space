@@ -17,7 +17,7 @@ const env = [
     ],
   },
   {
-    name: 'Waste and Industrial Effluents',
+    name: 'Classified Facilities',
     subReg: [
       {
         type: 'Executive Decree',
@@ -172,34 +172,7 @@ const env = [
       },
     ],
   },
-  {
-    name: 'Water & Wastewater',
-    subReg: [
-      {
-        type: 'Law',
-        date: 'August 8, 2005',
-        description: 'On Water.',
-      },
-      {
-        type: 'Executive Decree',
-        date: 'May 20, 2007',
-        description:
-          'Establishing the Procedures for the Concession of the Use of Treated Wastewater for Irrigation Purposes, as well as the Relevant Standard Terms of Reference.',
-      },
-      {
-        type: 'Executive Decree',
-        date: 'December 23, 2007',
-        description:
-          'On the Qualitative Protection Perimeter of Water Resources.',
-      },
-      {
-        type: 'Order',
-        date: 'September 24, 2006',
-        description:
-          'Establishing the Technical Procedures for the Flat-Rate Billing of the Fee Due for the Use, on a Remunerative Basis, of the Public Hydraulic Domain by Water Withdrawal for Injection into Oil Wells or for Other Uses of the Hydrocarbon Domain.',
-      },
-    ],
-  },
+
   {
     name: 'Atmospheric Emissions',
     subReg: [

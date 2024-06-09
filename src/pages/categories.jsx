@@ -108,7 +108,7 @@ export default function Categories() {
                 govern the Security Sector{' '}
               </p>
               <Link
-                to="/regulations?category=security&subCategory=Risk%20Management"
+                to="/regulations?category=safety&subCategory=Risk%20Management"
                 className="text-primary-600"
               >
                 Explore more!

@@ -159,7 +159,7 @@ const safety = [
     ],
   },
   {
-    name: 'Occupational Risks ',
+    name: 'Occupational Risks',
     subReg: [
       {
         type: 'Interministerial Decree',
